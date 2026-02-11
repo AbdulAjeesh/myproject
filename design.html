@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <style>
+    nav ul li {
+      display: inline-block;
+      padding: 10px;
+      background-color: black;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .heading {
+      background-color: black;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    h6 {
+      text-align: center;
+    }
+    .maincontent {
+      text-align: center;
+      margin-right: 20%;
+      margin-left: 20%;
+    }
+    .card {
+      text-align: center;
+    }
+    .card h4 {
+      margin-bottom: 10px;
+    }
+    .sample {
+      margin-top: 50px;
+      margin-bottom: 8%;
+      margin-left: 20%;
+      margin-right: 20%;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    .mainimg {
+      width: 100%;
+    }
+    .booking {
+      margin-top: 70px;
+      text-align: center;
+      color: white;
+      border: 2px solid black;
+      background-color: black;
+    }
+
+    .mainimg {
+      position: relative;
+    }
+    .mainimg-content {
+      max-width: 450px;
+      color: #fff;
+      text-align: center;
+      /* border: 3px solid red; */
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    .tour_container {
+      background-color: #000;
+    }
+
+    .tour-section {
+      width: 80%;
+      margin: auto;
+      padding: 60px;
+      color: white;
+      text-align: center;
+    }
+
+    .tour-section h1 {
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .tour-list {
+      background: #fff;
+      color: #000;
+      margin-bottom: 40px;
+    }
+
+    .tour-row {
+      display: flex;
+      /* justify-content: space-between; */
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .sold-out {
+      background: #f44336;
+      color: #fff;
+      padding: 3px 8px;
+      font-size: 14px;
+    }
+
+    .badge {
+      background: #000;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .card-body h3 {
+      margin-bottom: 8px;
+    }
+
+    .card-body span {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .card-body p {
+      margin: 12px 0px;
+      font-size: 14px;
+    }
+
+    .card-body button {
+      padding: 10px 15px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .card-body button:hover {
+      background: #444;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    .contact-section {
+      width: 80%;
+      margin: auto;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #888;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .contact-info {
+      width: 35%;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      width: 60%;
+      text-align: left;
+    }
+
+    .contact-form .row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      margin-bottom: 10px;
+    }
+
+    .contact-form button {
+      float: right;
+      padding: 8px 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #444;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+
+      .contact-info,
+      .contact-form {
+        width: 100%;
+      }
+
+      .contact-form button {
+        float: none;
+      }
+    }
+    .city-image img {
+      width: 100%;
+    }
+    .footer {
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
+  <body>
+    <header class="heading">
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Band</a></li>
+          <li><a href="">Tour</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">More </a></li>
+        </ul>
+      </nav>
+      <div class="search-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </header>
+
+    <div class="mainimg">
+      <img src="/images/losangels.jpg" width="100%" />
+
+      <div class="mainimg-content">
+        <h3>Los Angeles</h3>
+        <p>We had the best time playing at Venice Beach!</p>
+      </div>
+    </div>
+    <h1 class="subheading">THE BAND</h1>
+    <h6 class="subhead">We love music</h6>
+    <div>
+      <p class="maincontent">
+        We have created a fictional band website. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+
+    <div class="sample">
+      <div class="card">
+        <h4>Name</h4>
+        <img src="/images/bandmember.jpg" />
+      </div>
+      <div class="card">
+        <h4>Name</h4>
+        <img src="/images/bandmember.jpg" />
+      </div>
+      <div class="card">
+        <h4>Name</h4>
+        <img src="/images/bandmember.jpg" />
+      </div>
+    </div>
+
+    <div class="tour_container">
+      <section class="tour-section">
+        <h1>TOUR DATES</h1>
+        <p class="subtitle">Remember to book your tickets!</p>
+
+        <div class="tour-list">
+          <div class="tour-row">
+            <span>September</span>
+            <span class="sold-out">Sold out</span>
+          </div>
+          <div class="tour-row">
+            <span>October</span>
+            <span class="sold-out">Sold out</span>
+          </div>
+          <div class="tour-row">
+            <span>November</span>
+            <span class="badge">3</span>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <img src="/images/newyork.jpg" alt="New York" />
+            <div class="card-body">
+              <h3>New York</h3>
+              <span>Fri 27 Nov 2016</span>
+              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button>Buy Tickets</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/images/paris.jpg" alt="Paris" />
+            <div class="card-body">
+              <h3>Paris</h3>
+              <span>Sat 28 Nov 2016</span>
+              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button>Buy Tickets</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/images/sanfran.jpg" alt="San Francisco" />
+            <div class="card-body">
+              <h3>San Francisco</h3>
+              <span>Sun 29 Nov 2016</span>
+              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button>Buy Tickets</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="contact-section">
+      <h1>CONTACT</h1>
+      <p class="subtitle">Fan? Drop a note!</p>
+
+      <div class="contact-container">
+        <!-- Left Info -->
+        <div class="contact-info">
+          <p>📍 TamilNadu, India</p>
+          <p>📞 Phone: +91 XXXXXXXXXX</p>
+          <p>✉️ Email: mail@mail.com</p>
+        </div>
+
+        <!-- Right Form -->
+        <form class="contact-form">
+          <div class="row">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+          </div>
+          <textarea placeholder="Message" rows="4"></textarea>
+          <button type="submit">SEND</button>
+        </form>
+      </div>
+    </section>
+    <section class="city-image">
+      <img src="/images/map.jpg" />
+    </section>
+    <footer class="footer">
+      <div class="social-icons">
+        <img src="/images/social icons/facebook.png" />
+        <img src="/images/social icons/instagram-circle.png" />
+        <img src="/images/social icons/twitter.png" />
+        <img src="/images/social icons/linkedin.png" />
+      </div>
+      <p>Powered by <a href="https://www.w3schools.com/">w3.css</a></p>
+    </footer>
+  </body>
+</html>
